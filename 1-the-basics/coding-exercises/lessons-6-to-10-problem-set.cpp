@@ -48,18 +48,67 @@ int main()
         {
             char hex = 'A';
 
-            cout << static_cast<char>(hex+input1/pow-10);
+            cout << static_cast<char>(hex + input1 / pow - 10);
         }
         input1 %= pow;
         pow /= 16;
     }
-    if(input1<10){
-        cout << input1 << endl << endl;
+    if (input1 < 10)
+    {
+        cout << input1 << endl
+             << endl;
     }
-    else{
+    else
+    {
         char hex = 'A';
-        cout << static_cast<char>(hex+input1-10);
+        cout << static_cast<char>(hex + input1 - 10) << endl << endl;
     }
 
+    // Write a program which prompts the user for a positive integer n and then calculates the integer value 2^n using a for loop. Print the result.
+    cout << "Enter a number: ";
+    int n;
+    cin >> n;
+    int result = 1;
+    for (int i = 0; i < n; i++)
+    {
+        result *= 2;
+    }
+    cout << "2 to the power of " << n << " is: " << result << endl
+         << endl;
+
+    // Write a program which prompts the user for an integer m and then calculates the double 2.0^n using a for loop.
+    // Your code should work for both positive and negative numbers. Print the result.
+
+    cout << "Enter a number: ";
+    int m;
+    cin >> m;
+    double result1 = 1;
+    if (m > 0)
+    {
+        for (int i = 0; i < m; i++)
+        {
+            result1 *= 2;
+        }
+        cout << "2 to the power of " << m << " is: " << result1 << endl
+             << endl;
+    }
+    else if (m == 0)
+    {
+        cout << "2 to the power of " << m << " is: " << 1 << endl
+             << endl;
+    }
+    else
+    {
+        for (int i = 0; i > m; i--)
+        {
+            result1 /= 2;
+        }
+        cout << "2 to the power of " << m << " is: " << result1 << endl
+             << endl;
+    }
+
+
+    
     return 0;
+
 }
