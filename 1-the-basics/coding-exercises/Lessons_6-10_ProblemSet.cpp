@@ -122,7 +122,15 @@ int main()
     cout << "The double stored at " << ptr_e << " is " << *ptr_e << endl;
     cout << "The double stored at " << ptr_pi << " is " << *ptr_pi << endl;
     //Of the four variables, e, pi, ptr_e, and ptr_pi, which have had their values changed and to what?
-    //pi was changed to 3, ptr_pi was changed to ptr_e, e and its address were overwritten by these two variables.
+    //pi was changed to 3, ptr_pi was changed to ptr_e, e and its address are the exact same as pi and its address now.
+
+    //Add these two lines:
+    *ptr_pi = *ptr_e;
+	e = 2;
+    //Since both variables are written in the same memory, both are changed to 2.
+    cout << "The double stored at " << ptr_e << " is " << *ptr_e << endl;
+    cout << "The double stored at " << ptr_pi << " is " << *ptr_pi << endl;
+     
     return 0;
 
 }
