@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+#define pointer(x) x *
 int main()
 {
     // Create the game of hi-lo. Store an integer and continue prompting the user to enter a guess.
@@ -107,8 +107,22 @@ int main()
              << endl;
     }
 
-
-    
+    //Write a program which has two double variables:
+	double e  = 2.718281828459045;
+	double pi = 3.141592653589793;
+    //Now create two pointers to doubles, ptr_e and ptr_pi, and store the address of e and pi at these two pointers, respectively.
+    //Print the variables and the addresses.
+    double* ptr_e =  &e;
+    double* ptr_pi = &pi;
+    cout << "The double stored at " << ptr_e << " is " << *ptr_e << endl;
+    cout << "The double stored at " << ptr_pi << " is " << *ptr_pi << endl;
+    //Add these two lines:
+	ptr_pi = ptr_e;
+	*ptr_pi = 3;
+    cout << "The double stored at " << ptr_e << " is " << *ptr_e << endl;
+    cout << "The double stored at " << ptr_pi << " is " << *ptr_pi << endl;
+    //Of the four variables, e, pi, ptr_e, and ptr_pi, which have had their values changed and to what?
+    //pi was changed to 3, ptr_pi was changed to ptr_e, e and its address were overwritten by these two variables.
     return 0;
 
 }
